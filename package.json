@@ -1,0 +1,17 @@
+{
+  "name": "docker-pg",
+  "version": "1.0.0",
+  "description": "Template for using docker, express and postgres",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+    environment:
+        DATABASE_URL: postgresql://postgres:password@postgres/node
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: node
+    ports:
+      - "5432:5432"
